@@ -1,0 +1,246 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\title{Astro 17: Extragalactic Astronomy and Cosmology\\
+\large Instructor's Guide to Lab Notebooks}
+\author{Harvard University, Fall 2025}
+\date{}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+This guide accompanies the Python Jupyter notebooks for Astro 17, Harvard's introductory course in extragalactic astronomy and cosmology. The notebooks provide hands-on computational exercises covering topics from stellar populations to cosmological distance measurements.
+
+All notebooks are designed to run on Google Colab, a cloud-based Jupyter notebook environment that requires no local software installation.
+
+\section{Google Colab: Benefits and Considerations}
+
+\subsection{Benefits of Using Colab}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{No local setup required} -- Students can begin working immediately without installing Python, Jupyter, or any packages on their personal computers.
+    \item \textbf{Platform independence} -- Works on any computer with a web browser (Windows, Mac, Linux, Chromebook).
+    \item \textbf{Pre-installed scientific libraries} -- NumPy, Matplotlib, SciPy, Astropy, and Pandas are available by default.
+    \item \textbf{GPU/TPU access} -- For advanced exercises, Colab provides free access to accelerated computing resources.
+    \item \textbf{Easy sharing} -- Notebooks can be shared via Google Drive links for collaboration or grading.
+    \item \textbf{Built-in AI assistant} -- The Gemini AI integration helps students understand code and debug issues.
+\end{itemize}
+
+\subsection{Important Considerations}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Google Drive mounting required} -- To access data files, students must mount their Google Drive and navigate to the folder containing the data files. This requires a Google account.
+
+    \item \textbf{Data files must be uploaded} -- Students need to copy the data files from the course repository to their own Google Drive's \texttt{Colab Notebooks} folder (or another folder of their choice, adjusting the path in the notebook accordingly).
+
+    \item \textbf{pip installations do not persist} -- Any packages installed with \texttt{pip install} during a session are lost when the runtime disconnects. Students must re-run pip install cells each time they open a notebook. For example, the \texttt{LineProfileGalaxies} notebook requires \texttt{pip install ipympl} at the start of each session.
+
+    \item \textbf{Runtime timeouts} -- Colab disconnects after periods of inactivity (typically 90 minutes). Students should save work frequently.
+
+    \item \textbf{Internet required} -- Colab is entirely cloud-based and requires an internet connection.
+\end{itemize}
+
+\subsection{Student Setup Instructions}
+
+Students should follow these steps before their first lab session:
+
+\begin{enumerate}
+    \item Create a Google account if they don't have one.
+    \item Go to \url{https://colab.research.google.com}.
+    \item In Google Drive, create a folder called \texttt{Colab Notebooks} (or use an existing folder).
+    \item Download all data files from the course repository's \texttt{data/} folder.
+    \item Upload the data files to their \texttt{Colab Notebooks} folder on Google Drive.
+    \item Open each notebook from the course repository in Colab.
+    \item When prompted, authorize Colab to access Google Drive.
+\end{enumerate}
+
+\section{Notebook Descriptions}
+
+\subsection{Gaussians}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Statistical fitting and Gaussian distributions
+    \item[Learning Objectives:] Understanding probability distributions, curve fitting, chi-squared analysis, parameter estimation with uncertainties
+    \item[Required Data:] None (synthetic data generated in notebook)
+    \item[Prerequisites:] Basic Python, NumPy arrays
+    \item[Common Issues:] None -- self-contained notebook
+\end{description}
+
+\subsection{Linear\_Regression\_Correlation}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Linear regression and parameter correlation
+    \item[Learning Objectives:] Understanding how slope and intercept become correlated when fitting data far from origin; mean subtraction to improve numerical stability
+    \item[Required Data:] None (synthetic data generated in notebook)
+    \item[Prerequisites:] Basic statistics, curve fitting concepts
+    \item[Common Issues:] None -- self-contained notebook
+\end{description}
+
+\subsection{Distances}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Cosmological distance measures
+    \item[Learning Objectives:] Understanding luminosity distance, angular diameter distance, comoving distance; cosmological redshift; distance modulus
+    \item[Required Data:] None (calculations only)
+    \item[Prerequisites:] Basic cosmology concepts
+    \item[Common Issues:] None -- self-contained notebook
+\end{description}
+
+\subsection{gaia}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Hertzsprung-Russell diagram using Gaia data
+    \item[Learning Objectives:] Stellar parallax and distance; absolute vs. apparent magnitude; color-magnitude diagrams; main sequence, giant branch, white dwarfs
+    \item[Required Data:] \texttt{gaia\_200pc\_sample.fits}
+    \item[Prerequisites:] Magnitude system, stellar classification basics
+    \item[Common Issues:] Students must correctly calculate absolute magnitude from parallax
+\end{description}
+
+\subsection{Galaxy\_Rotation\_Curve\_Fitting}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Galaxy rotation curves and dark matter
+    \item[Learning Objectives:] Rotation curve analysis; evidence for dark matter; mass modeling (disk, bulge, halo components)
+    \item[Required Data:] None (NGC 7331 data embedded in notebook)
+    \item[Prerequisites:] Keplerian dynamics, mass estimation
+    \item[Common Issues:] Understanding the disk/halo decomposition
+\end{description}
+
+\subsection{LineProfileGalaxies}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Galaxy morphology through brightness profiles
+    \item[Learning Objectives:] FITS image analysis; surface brightness profiles; exponential vs. de Vaucouleurs profiles; morphological classification
+    \item[Required Data:] Multiple FITS images: \texttt{M74DSS2red.fits}, \texttt{M87SDSSr.fits}, \texttt{M101DSS2red.fits}, \texttt{M84SDSSr.fits}, \texttt{M89SDSSr.fits}, \texttt{M105SDSSr.fits}, \texttt{NGC4874DSS2red.fits}, and others
+    \item[Prerequisites:] Galaxy classification, magnitude systems
+    \item[Special Setup:] Requires \texttt{pip install ipympl} at start of each session, followed by kernel restart
+    \item[Common Issues:] Interactive widget may not work if ipympl not installed; students must restart runtime after pip install
+\end{description}
+
+\subsection{NumberCounts}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Galaxy number counts and star-galaxy separation
+    \item[Learning Objectives:] Photometric catalogs; PSF vs. Petrosian magnitudes; star-galaxy separation; number counts as cosmological probe
+    \item[Required Data:] \texttt{A1942nohead.tsv}
+    \item[Prerequisites:] Magnitude systems, basic statistics
+    \item[Common Issues:] Understanding the magnitude uncertainty as inverse SNR
+\end{description}
+
+\subsection{ClusterLRG\_Rubin}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Galaxy cluster analysis with Rubin Observatory data
+    \item[Learning Objectives:] cModel photometry; color-magnitude diagrams; red sequence selection; photometric redshifts
+    \item[Required Data:] \texttt{abell360\_rubin\_dp1\_303\_1\_galaxy\_photometry\_v6.fits}
+    \item[Prerequisites:] NumberCounts notebook concepts
+    \item[Common Issues:] Large file size may slow upload
+\end{description}
+
+\subsection{Zshell}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Galaxy luminosity functions at fixed redshift
+    \item[Learning Objectives:] Redshift shells; K-corrections; luminosity functions; Schechter function fitting
+    \item[Required Data:] \texttt{sdss\_photometry.csv}
+    \item[Prerequisites:] Redshift, magnitude systems
+    \item[Common Issues:] Understanding the narrow redshift slice selection
+\end{description}
+
+\subsection{SN1a\_Hubble\_Fit}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Type Ia supernovae and the Hubble diagram
+    \item[Learning Objectives:] Standard candles; distance modulus; Hubble diagram; cosmological parameter estimation
+    \item[Required Data:] None (supernova data embedded in notebook)
+    \item[Prerequisites:] Distances notebook concepts
+    \item[Common Issues:] Understanding distance modulus vs. redshift relationship
+\end{description}
+
+\subsection{Diffraction\_Grating\_Lab}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Required Data:}]
+    \item[Topic:] Spectroscopy with diffraction gratings
+    \item[Learning Objectives:] Diffraction grating equation; wavelength calibration; spectral line identification
+    \item[Required Data:] Student-provided spectrum images (taken in lab)
+    \item[Prerequisites:] Basic optics, wavelength concepts
+    \item[Common Issues:] Image quality affects measurements; students upload their own images via \texttt{files.upload()}
+\end{description}
+
+\section{Required Python Packages}
+
+All notebooks use packages that are pre-installed on Google Colab:
+
+\begin{itemize}
+    \item \texttt{numpy} -- Numerical computing
+    \item \texttt{matplotlib} -- Plotting
+    \item \texttt{scipy} -- Scientific computing (curve fitting, optimization)
+    \item \texttt{astropy} -- Astronomical utilities (FITS, units, coordinates)
+    \item \texttt{pandas} -- Data manipulation
+\end{itemize}
+
+One notebook requires an additional package:
+\begin{itemize}
+    \item \texttt{ipympl} -- Required by \texttt{LineProfileGalaxies.ipynb} for interactive plotting. Must be installed with \texttt{pip install ipympl} at the start of each session.
+\end{itemize}
+
+\section{Data Files Summary}
+
+\begin{longtable}{lll}
+\toprule
+\textbf{File} & \textbf{Size} & \textbf{Used By} \\
+\midrule
+\endhead
+\texttt{A1942nohead.tsv} & 2.9 MB & NumberCounts \\
+\texttt{abell360\_rubin\_dp1\_...fits} & 1.7 MB & ClusterLRG\_Rubin \\
+\texttt{gaia\_200pc\_sample.fits} & 360 KB & gaia \\
+\texttt{sdss\_photometry.csv} & 220 KB & Zshell \\
+\texttt{M74DSS2red.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{M87SDSSr.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{M87SDSSu.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{M101DSS2red.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{M101WISE3.5.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{M84SDSSr.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{M89SDSSr.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{M105SDSSr.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{NGC4874DSS2red.fits} & 4.2 MB & LineProfileGalaxies \\
+\texttt{DECAMr.fits} & 33.5 MB & LineProfileGalaxies \\
+\bottomrule
+\end{longtable}
+
+Total data size: approximately 75 MB.
+
+\section{Suggested Notebook Sequence}
+
+A recommended order for working through the notebooks:
+
+\begin{enumerate}
+    \item \textbf{Gaussians} -- Foundational statistics
+    \item \textbf{Linear\_Regression\_Correlation} -- Fitting techniques
+    \item \textbf{gaia} -- Stellar HR diagram
+    \item \textbf{Distances} -- Cosmological distances
+    \item \textbf{Galaxy\_Rotation\_Curve\_Fitting} -- Dark matter evidence
+    \item \textbf{LineProfileGalaxies} -- Galaxy morphology
+    \item \textbf{NumberCounts} -- Galaxy catalogs
+    \item \textbf{ClusterLRG\_Rubin} -- Galaxy clusters
+    \item \textbf{Zshell} -- Luminosity functions
+    \item \textbf{SN1a\_Hubble\_Fit} -- Cosmological measurements
+    \item \textbf{Diffraction\_Grating\_Lab} -- Spectroscopy (lab-based)
+\end{enumerate}
+
+\section{Technical Contact}
+
+For technical questions about these notebooks, contact:
+
+\bigskip
+\textbf{Christopher Stubbs}\\
+Harvard University\\
+\texttt{[email address]}
+
+\section{Acknowledgements}
+
+[Placeholder for acknowledgements of contributors, teaching fellows, and others who helped develop these materials.]
+
+\bigskip
+
+These notebooks were developed with assistance from AI tools including Google Gemini and Claude Code.
+
+\end{document}

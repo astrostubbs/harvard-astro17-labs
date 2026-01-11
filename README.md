@@ -1,0 +1,67 @@
+# Harvard Astro 17: Extragalactic Astronomy Lab Notebooks
+
+Instructional Python notebooks for Harvard's Fall 2025 introductory extragalactic astronomy and cosmology course.
+
+## Overview
+
+These Jupyter notebooks provide hands-on computational exercises covering topics from stellar populations to cosmological distance measurements. All notebooks are designed to run on **Google Colab** with no local installation required.
+
+## Quick Start
+
+1. Download the data files from the `data/` folder
+2. Upload them to your Google Drive's `Colab Notebooks` folder
+3. Open any notebook from `notebooks/` in Google Colab
+4. Mount your Google Drive when prompted
+5. Run the cells!
+
+## Notebooks
+
+| Notebook | Topic | Data Required |
+|----------|-------|---------------|
+| `Gaussians.ipynb` | Statistical fitting and distributions | None |
+| `Linear_Regression_Correlation.ipynb` | Regression and parameter correlation | None |
+| `Distances.ipynb` | Cosmological distance measures | None |
+| `gaia.ipynb` | HR diagram with Gaia data | `gaia_200pc_sample.fits` |
+| `Galaxy_Rotation_Curve_Fitting.ipynb` | Dark matter and rotation curves | None (embedded) |
+| `LineProfileGalaxies.ipynb` | Galaxy morphology profiles | Multiple FITS images |
+| `NumberCounts.ipynb` | Galaxy counts and star-galaxy separation | `A1942nohead.tsv` |
+| `ClusterLRG_Rubin.ipynb` | Galaxy clusters with Rubin data | `abell360_...fits` |
+| `Zshell.ipynb` | Galaxy luminosity functions | `sdss_photometry.csv` |
+| `SN1a_Hubble_Fit.ipynb` | Hubble diagram fitting | None (embedded) |
+| `Diffraction_Grating_Lab.ipynb` | Spectroscopy lab | Student-provided images |
+
+## Data Files
+
+All data files are in the `data/` directory. Total size: ~75 MB.
+
+## Google Colab Notes
+
+**Benefits:**
+- No local Python installation needed
+- Works on any computer with a web browser
+- Pre-installed scientific libraries
+
+**Important:**
+- Data files must be in your Google Drive
+- `pip install` commands don't persist between sessions
+- Save work frequently (Colab times out after inactivity)
+
+## Requirements
+
+For local Jupyter use (optional):
+```bash
+pip install -r requirements.txt
+```
+
+## Documentation
+
+See `instructor_guide.tex` for detailed notebook descriptions, learning objectives, and setup instructions.
+
+## Author
+
+Christopher Stubbs
+Harvard University
+
+## License
+
+Educational use only.
