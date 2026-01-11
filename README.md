@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 ## Documentation
 
-See `notebooks/Astro17_instructor_guide_for_notebooks.pdf` for detailed notebook descriptions, learning objectives, and setup instructions.
+See `Astro17_instructor_guide_for_notebooks.pdf` for detailed notebook descriptions, learning objectives, and setup instructions.
 
 ## Author
 
