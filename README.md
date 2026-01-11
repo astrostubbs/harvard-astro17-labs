@@ -26,9 +26,9 @@ These Google Colab notebooks provide hands-on computational exercises covering t
 | `Galaxy_Rotation_Curve_Fitting.ipynb` | Dark matter and rotation curves | None (embedded) |
 | `LineProfileGalaxies.ipynb` | Galaxy morphology profiles | Multiple FITS images |
 | `NumberCounts.ipynb` | Galaxy counts and star-galaxy separation | `A1942nohead.tsv` |
-| `ClusterLRG_Rubin.ipynb` | Galaxy clusters with Rubin data | `abell360_...fits` |
-| `Zshell.ipynb` | Galaxy luminosity functions | `sdss_photometry.csv` |
-| `SN1a_Hubble_Fit.ipynb` | Hubble diagram fitting | None (embedded) |
+| `ClusterLRG_Rubin.ipynb` | Galaxy clusters with Rubin data, photoz's | `abell360_...fits` |
+| `Zshell.ipynb` | Galaxy spatial distributions | `sdss_photometry.csv` |
+| `SN1a_Hubble_Fit.ipynb` | Hubble diagram fitting, evidence for dark energy | None (embedded) |
 | `Diffraction_Grating_Lab.ipynb` | Spectroscopy lab | Student-provided images |
 
 ## Data Files
