@@ -21,6 +21,7 @@ These Google Colab notebooks provide hands-on computational exercises covering t
 | `Gaussians.ipynb` | Statistical fitting and distributions | None |
 | `Linear_Regression_Correlation.ipynb` | Regression and parameter correlation | None |
 | `Distances.ipynb` | Cosmological distance measures | None |
+| `FIRASfit.ipynb` | CMB blackbody spectrum fitting | None (embedded) |
 | `gaia.ipynb` | HR diagram with Gaia data | `gaia_200pc_sample.fits` |
 | `Galaxy_Rotation_Curve_Fitting.ipynb` | Dark matter and rotation curves | None (embedded) |
 | `LineProfileGalaxies.ipynb` | Galaxy morphology profiles | Multiple FITS images |
