@@ -1,10 +1,10 @@
 # Harvard Astro 17: Extragalactic Astronomy Lab Notebooks
 
-Instructional Python notebooks for Harvard's Fall 2025 introductory extragalactic astronomy and cosmology course.
+Instructional Colab notebooks for Harvard's Fall 2025 introductory extragalactic astronomy and cosmology course.
 
 ## Overview
 
-These Jupyter notebooks provide hands-on computational exercises covering topics from stellar populations to cosmological distance measurements. All notebooks are designed to run on **Google Colab** with no local installation required.
+These Google Colab notebooks provide hands-on computational exercises covering topics from stellar populations to cosmological distance measurements. All notebooks run on **Google Colab** with no local installation required.
 
 ## Quick Start
 
@@ -48,7 +48,7 @@ All data files are in the `data/` directory. Total size: ~75 MB.
 
 ## Requirements
 
-For local Jupyter use (optional):
+For local use (optional):
 ```bash
 pip install -r requirements.txt
 ```
