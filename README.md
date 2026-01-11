@@ -62,6 +62,11 @@ See `Astro17_instructor_guide_for_notebooks.pdf` for detailed notebook descripti
 
 Christopher Stubbs
 Harvard University
+stubbs@g.harvard.edu
+
+## Astronomical Survey Data Used
+
+These notebooks use associated image and catalog data from SDSS, the Pantheon SN survey, Rubin, DESI, and Gaia. 
 
 ## License
 
